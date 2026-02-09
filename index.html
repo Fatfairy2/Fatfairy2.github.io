@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Name — Portfolio</title>
+  <meta name="description" content="Portfolio + resume for career fair." />
+  <style>
+    :root{
+      --bg:#0b0d12; --card:#121726; --text:#e9edf5; --muted:#aab3c5;
+      --line:#232a3d; --accent:#7aa2ff;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      background: radial-gradient(1200px 600px at 10% 0%, #121a33 0%, var(--bg) 45%) fixed;
+      color:var(--text);
+    }
+    a{color:inherit}
+    .wrap{max-width:980px; margin:0 auto; padding:20px}
+    header{
+      position:sticky; top:0; backdrop-filter: blur(10px);
+      background: rgba(11,13,18,.6); border-bottom:1px solid rgba(35,42,61,.6);
+      z-index:5;
+    }
+    .nav{display:flex; align-items:center; justify-content:space-between; gap:12px}
+    .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
+    .logo{
+      width:36px; height:36px; border-radius:12px; background:linear-gradient(135deg,var(--accent),#9b7aff);
+      display:grid; place-items:center; font-weight:800; color:#0b0d12;
+    }
+    .links{display:flex; gap:14px; flex-wrap:wrap}
+    .links a{color:var(--muted); text-decoration:none; font-size:14px}
+    .links a:hover{color:var(--text)}
+    .btn{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:10px 12px; border-radius:12px; border:1px solid var(--line);
+      background:rgba(18,23,38,.7); text-decoration:none; color:var(--text);
+    }
+    .btn:hover{border-color:rgba(122,162,255,.7)}
+    .hero{padding:28px 0 10px}
+    .grid{display:grid; gap:14px}
+    @media(min-width:860px){ .grid-2{grid-template-columns: 1.4fr 1fr;} }
+    .card{
+      background: rgba(18,23,38,.78);
+      border:1px solid rgba(35,42,61,.9);
+      border-radius:18px; padding:16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+    }
+    h1{margin:0 0 8px; font-size:34px; letter-spacing:-.5px}
+    p{margin:8px 0; color:var(--muted); line-height:1.55}
+    .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:12px}
+    .chip{
+      padding:7px 10px; border-radius:999px; border:1px solid rgba(35,42,61,.9);
+      color:var(--muted); font-size:13px; background: rgba(11,13,18,.35);
+    }
+    h2{margin:0 0 10px; font-size:18px}
+    .list{display:grid; gap:10px}
+    .item{
+      padding:12px; border-radius:14px; border:1px solid rgba(35,42,61,.9);
+      background: rgba(11,13,18,.35);
+    }
+    .item b{display:block; margin-bottom:4px}
+    .row{display:flex; gap:10px; flex-wrap:wrap; margin-top:10px}
+    .small{font-size:13px; color:var(--muted)}
+    .section{margin-top:14px}
+    .photos{display:grid; grid-template-columns: repeat(3,1fr); gap:10px}
+    .ph{
+      aspect-ratio: 4/3; border-radius:14px; border:1px solid rgba(35,42,61,.9);
+      background: linear-gradient(135deg, rgba(122,162,255,.25), rgba(155,122,255,.18));
+      display:grid; place-items:center; color:rgba(233,237,245,.8); font-size:13px;
+      overflow:hidden;
+    }
+    .footer{
+      margin:22px 0 6px; padding-top:16px; border-top:1px solid rgba(35,42,61,.9);
+      display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;
+      color:var(--muted); font-size:13px;
+    }
+    .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace}
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <div class="logo">YN</div>
+      <div>
+        <div style="font-weight:700; line-height:1.1;">Maier Tan</div>
+        <div class="small">Mechanical Engineer & Tutor • Singapore</div>
+      </div>
+    </a>
+    <nav class="links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#resume">Resume</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top" class="wrap">
+  <section class="hero grid grid-2">
+    <div class="card">
+      <h1>Hey, I’m <span style="color:var(--text);">Your Name</span> 👋</h1>
+      <p>
+        One-liner that helps recruiters remember you:
+        <span style="color:var(--text);">“I build ___ that helps ___ by ___.”</span>
+      </p>
+      <p>
+        Short story (3–4 lines). Mention what you’re seeking at the career fair,
+        and what you’re strongest at (tools/skills).
+      </p>
+
+      <div class="chips">
+        <span class="chip">Skill 1</span>
+        <span class="chip">Skill 2</span>
+        <span class="chip">Skill 3</span>
+        <span class="chip">3D Printing / CAD</span>
+      </div>
+
+      <div class="row">
+        <a class="btn" href="#projects">View Projects →</a>
+        <a class="btn" href="YOUR_RESUME_LINK.pdf" target="_blank" rel="noreferrer">Download Resume</a>
+        <a class="btn" href="https://www.linkedin.com/in/YOURHANDLE" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="btn" href="https://github.com/YOURHANDLE" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+
+      <p class="small" style="margin-top:12px;">
+        Tip: print a QR code linking to this page and put it on your resume / name tag.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Quick Highlights</h2>
+      <div class="list">
+        <div class="item">
+          <b>Signature project</b>
+          <div class="small">What it does • impact/metric • tech stack</div>
+        </div>
+        <div class="item">
+          <b>Second project</b>
+          <div class="small">What it does • impact/metric • tech stack</div>
+        </div>
+        <div class="item">
+          <b>What I’m looking for</b>
+          <div class="small">Internship / full-time • roles • industries</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section grid">
+    <div class="card">
+      <h2>About</h2>
+      <p>
+        Write this like the recruiter has 15 seconds:
+        who you are, what you’re good at, what you enjoy building, and what kind of team/problem you want.
+      </p>
+
+      <div class="photos" style="margin-top:12px;">
+        <div class="ph">Photo / hobby 1</div>
+        <div class="ph">Photo / hobby 2</div>
+        <div class="ph">Photo / hobby 3</div>
+      </div>
+      <p class="small" style="margin-top:10px;">
+        Optional: add personality (sports, photography, projects) — like the reference site’s photo + hobby sections. 
+      </p>
+    </div>
+  </section>
+
+  <section id="projects" class="section grid">
+    <div class="card">
+      <h2>Projects</h2>
+      <div class="list">
+        <div class="item">
+          <b>Project Name — 1-liner</b>
+          <div class="small">Problem → solution → result. Tech: A, B, C.</div>
+          <div class="row">
+            <a class="btn" href="PROJECT_LINK" target="_blank" rel="noreferrer">Demo</a>
+            <a class="btn" href="GITHUB_LINK" target="_blank" rel="noreferrer">Code</a>
+          </div>
+        </div>
+
+        <div class="item">
+          <b>Project Name — 1-liner</b>
+          <div class="small">Problem → solution → result. Tech: A, B, C.</div>
+          <div class="row">
+            <a class="btn" href="PROJECT_LINK" target="_blank" rel="noreferrer">Demo</a>
+            <a class="btn" href="GITHUB_LINK" target="_blank" rel="noreferrer">Code</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="section grid">
+    <div class="card">
+      <h2>Experience</h2>
+      <div class="list">
+        <div class="item">
+          <b>Role • Company</b>
+          <div class="small">Month YYYY – Month YYYY • 2–3 bullet highlights (impact-based)</div>
+        </div>
+        <div class="item">
+          <b>Role • Organization</b>
+          <div class="small">Month YYYY – Month YYYY • 2–3 bullet highlights (impact-based)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="resume" class="section grid">
+    <div class="card">
+      <h2>Resume</h2>
+      <p>Keep a PDF copy so recruiters can download instantly.</p>
+      <div class="row">
+        <a class="btn" href="YOUR_RESUME_LINK.pdf" target="_blank" rel="noreferrer">Open Resume PDF</a>
+        <a class="btn" href="#contact">Contact Me</a>
+      </div>
+      <p class="small">If you don’t have hosting for the PDF yet, you can upload it to GitHub repo / Google Drive (public link).</p>
+    </div>
+  </section>
+
+  <section id="contact" class="section grid">
+    <div class="card">
+      <h2>Contact</h2>
+      <p class="mono">Email: Maiertan1@gmail.com</p>
+      <p class="mono">Telegram/WhatsApp: +65 9150 8603 (optional)</p>
+      <p class="mono">LinkedIn: https://www.linkedin.com/in/maier-tan-6a2230164/
+      <div class="row">
+        <a class="btn" href="mailto:Maiertan1@gmail.com?subject=Career%20Fair%20-%20Hello%20Your%20Name">Email Me</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer">
+    <div>handcrafted by you © <span id="y"></span></div>
+    <div class="mono">dark • light (optional)</div>
+  </div>
+</main>
+
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
