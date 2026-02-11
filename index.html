@@ -4,7 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Maier Tan — Portfolio</title>
-  <meta name="description" content="Mechanical Engineer & Tutor" />
+  <meta name="description" content="Maier Tan — Mechanical Engineering @ NUS. CAD, prototyping, UAV structural work, and resume." />
+
   <style>
     :root{
       --bg:#0b0d12; --card:#121726; --text:#e9edf5; --muted:#aab3c5;
@@ -17,7 +18,9 @@
       color:var(--text);
     }
     a{color:inherit}
+
     .wrap{max-width:980px; margin:0 auto; padding:20px}
+
     header{
       position:sticky; top:0; backdrop-filter: blur(10px);
       background: rgba(11,13,18,.6); border-bottom:1px solid rgba(35,42,61,.6);
@@ -26,35 +29,50 @@
     .nav{display:flex; align-items:center; justify-content:space-between; gap:12px}
     .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
     .logo{
-      width:36px; height:36px; border-radius:12px; background:linear-gradient(135deg,var(--accent),#9b7aff);
+      width:36px; height:36px; border-radius:12px;
+      background:linear-gradient(135deg,var(--accent),#9b7aff);
       display:grid; place-items:center; font-weight:800; color:#0b0d12;
     }
     .links{display:flex; gap:14px; flex-wrap:wrap}
     .links a{color:var(--muted); text-decoration:none; font-size:14px}
     .links a:hover{color:var(--text)}
+
     .btn{
       display:inline-flex; align-items:center; gap:8px;
       padding:10px 12px; border-radius:12px; border:1px solid var(--line);
       background:rgba(18,23,38,.7); text-decoration:none; color:var(--text);
     }
     .btn:hover{border-color:rgba(122,162,255,.7)}
-    .hero{padding:28px 0 10px}
+
     .grid{display:grid; gap:14px}
     @media(min-width:860px){ .grid-2{grid-template-columns: 1.4fr 1fr;} }
+
     .card{
       background: rgba(18,23,38,.78);
       border:1px solid rgba(35,42,61,.9);
       border-radius:18px; padding:16px;
       box-shadow: 0 10px 30px rgba(0,0,0,.25);
     }
+
     h1{margin:0 0 8px; font-size:34px; letter-spacing:-.5px}
+    h2{margin:0 0 10px; font-size:18px}
     p{margin:8px 0; color:var(--muted); line-height:1.55}
+    .small{font-size:13px; color:var(--muted)}
+    .section{margin-top:14px}
+
+    .heroTop{display:flex; gap:16px; align-items:center; margin-bottom:12px}
+    .pfp{
+      width:96px; height:96px; border-radius:50%;
+      object-fit:cover; border:1px solid rgba(35,42,61,.9);
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+    }
+
     .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:12px}
     .chip{
       padding:7px 10px; border-radius:999px; border:1px solid rgba(35,42,61,.9);
       color:var(--muted); font-size:13px; background: rgba(11,13,18,.35);
     }
-    h2{margin:0 0 10px; font-size:18px}
+
     .list{display:grid; gap:10px}
     .item{
       padding:12px; border-radius:14px; border:1px solid rgba(35,42,61,.9);
@@ -62,21 +80,36 @@
     }
     .item b{display:block; margin-bottom:4px}
     .row{display:flex; gap:10px; flex-wrap:wrap; margin-top:10px}
-    .small{font-size:13px; color:var(--muted)}
-    .section{margin-top:14px}
-    .photos{display:grid; grid-template-columns: repeat(3,1fr); gap:10px}
-    .ph{
-      aspect-ratio: 4/3; border-radius:14px; border:1px solid rgba(35,42,61,.9);
-      background: linear-gradient(135deg, rgba(122,162,255,.25), rgba(155,122,255,.18));
-      display:grid; place-items:center; color:rgba(233,237,245,.8); font-size:13px;
-      overflow:hidden;
+
+    .photos{display:grid; grid-template-columns: repeat(3,1fr); gap:10px; margin-top:12px}
+    @media(max-width:720px){ .photos{grid-template-columns: 1fr;} }
+
+    figure.ph{
+      margin:0; padding:0; overflow:hidden; border-radius:14px;
+      border:1px solid rgba(35,42,61,.9);
+      background: rgba(11,13,18,.35);
     }
+    figure.ph img{
+      width:100%; height:100%; display:block;
+      object-fit:cover; aspect-ratio: 4/3;
+    }
+    figure.ph figcaption{
+      padding:10px 12px; font-size:13px; color:var(--muted);
+      border-top:1px solid rgba(35,42,61,.9);
+    }
+
+    .projGrid{display:grid; gap:10px}
+    @media(min-width:860px){ .projGrid{grid-template-columns: 1fr 1fr;} }
+    .projThumb{
+      width:100%; border-radius:14px; border:1px solid rgba(35,42,61,.9);
+      aspect-ratio: 16/10; object-fit:cover; background: rgba(11,13,18,.35);
+    }
+
     .footer{
       margin:22px 0 6px; padding-top:16px; border-top:1px solid rgba(35,42,61,.9);
       display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;
       color:var(--muted); font-size:13px;
     }
-    .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace}
   </style>
 </head>
 
@@ -87,55 +120,57 @@
       <div class="logo">MT</div>
       <div>
         <div style="font-weight:700; line-height:1.1;">Maier Tan</div>
-        <div class="small">Mechanical Engineer • CAD & Prototyping • Singapore</div>
+        <div class="small">Mechanical Engineering • CAD & Prototyping • Singapore</div>
       </div>
     </a>
     <nav class="links">
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
       <a href="#experience">Experience</a>
-      <a href="#resume">Resume</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
 </header>
 
 <main id="top" class="wrap">
-  <section class="hero grid grid-2">
-    <div class="heroTop">
-  <img class="pfp" src="Profile.jpg" alt="Maier Tan" />
-  <div>
-    <h1 style="margin:0;">
-      Hey, I’m <span style="color:var(--text);">Maier</span> 👋
-    </h1>
-    <p class="small" style="margin:6px 0 0;">
-      Mechanical Engineering @ NUS • CAD / Prototyping • Singapore
-    </p>
-  </div>
-</div>
-        <span style="color:var(--text);">“ I design and build practical mechanical solutions, from CAD to 3D-printed prototypes, with a focus on fast iteration and real-world usability.”</span>
+
+  <!-- HERO -->
+  <section class="grid grid-2">
+    <div class="card">
+      <div class="heroTop">
+        <img class="pfp" src="Profile.jpg" alt="Maier Tan" />
+        <div>
+          <h1 style="margin:0;">Hey, I’m <span style="color:var(--text);">Maier</span> 👋</h1>
+          <p class="small" style="margin:6px 0 0;">
+            Mechanical Engineering @ NUS • CAD / Prototyping • Singapore
+          </p>
+        </div>
+      </div>
+
+      <p>
+        I design and build practical mechanical solutions — from CAD modelling to 3D-printed prototypes —
+        focused on fast iteration and real-world usability.
       </p>
       <p>
-       I’m currently seeking a entry-level roles in mechanical design,
-product development, or manufacturing. I’m strongest in SolidWorks,
-hands-on prototyping, and translating ideas into functional parts.
+        I’m currently seeking entry-level roles in mechanical design, product development, or manufacturing.
+        Strongest in SolidWorks, hands-on prototyping, and translating ideas into functional parts.
       </p>
 
       <div class="chips">
-        <span class="chip">Solidworks (CSWA)</span>
-        <span class="chip">UAV Structural Design </span>
-        <span class="chip">Mechanical Design</span>
-        <span class="chip">3D Printing </span>
+        <span class="chip">SolidWorks (CSWA)</span>
+        <span class="chip">UAV Structural Design</span>
+        <span class="chip">Basic FEA</span>
+        <span class="chip">3D Printing</span>
       </div>
 
       <div class="row">
         <a class="btn" href="#projects">View Projects →</a>
-        <a class="btn" href="resume.pdf" target="_blank" rel="noreferrer">Download Resume</a>
+        <a class="btn" href="resume.pdf" target="_blank" rel="noreferrer">Download Resume (PDF)</a>
         <a class="btn" href="https://www.linkedin.com/in/maier-tan-6a2230164/" target="_blank" rel="noreferrer">LinkedIn</a>
-             </div>
+      </div>
 
       <p class="small" style="margin-top:12px;">
-        Tip: print a QR code linking to this page and put it on your resume / name tag.
+        Career fair tip: put a QR code to this page on your resume.
       </p>
     </div>
 
@@ -143,155 +178,166 @@ hands-on prototyping, and translating ideas into functional parts.
       <h2>Quick Highlights</h2>
       <div class="list">
         <div class="item">
-          <b>AeroNUS UAV – Structural Design Lead</b>
+          <b>AeroNUS UAV – Structural Design & CAD Lead</b>
           <div class="small">
-            Led CAD and structural design for an electric-powered UAV (AIAA Design-Build-Fly).
-            Focus on weight optimisation, FEA-assisted design, and manufacturability.
+            CAD + basic FEA for an electric UAV (AIAA Design-Build-Fly). Focus on strength-to-weight and manufacturability.
           </div>
         </div>
-        
         <div class="item">
-          <b>Aviation & Operations Experience</b>
+          <b>Jet Aviation (Asia Pacific)</b>
           <div class="small">
-            Former RSAF Air Warfare Officer with experience in high-responsibility, time-critical operations and structured training environments.
+            CAAS compliance documentation + process improvement in a PMO environment.
           </div>
         </div>
-        
         <div class="item">
-          <b>What I’m Looking For</b>
+          <b>What I’m looking for</b>
           <div class="small">
             Entry-level roles in mechanical design, aerospace, or product development.
           </div>
         </div>
       </div>
-</section>
+    </div>
+  </section>
 
+  <!-- ABOUT -->
   <section id="about" class="section grid">
     <div class="card">
       <h2>About</h2>
-     <p>
-       I’m a Mechanical Engineering undergraduate at NUS with a strong interest in designing systems that work in the real world.
-     </p>
-      
       <p>
-        My experience ranges from UAV structural design and CAD work to aviation
-        operations and technical project coordination. I enjoy bridging theory with
-        hands-on implementation — turning concepts into designs that can be built,
-        tested, and improved.
+        I’m a Mechanical Engineering undergraduate at NUS who likes building things that actually work —
+        designs you can fabricate, test, and improve.
       </p>
       <p>
-        Beyond engineering, my background in the RSAF, student leadership,
-        and tutoring has trained me to stay calm under pressure and explain
-        things clearly — especially when things don’t go as planned.
+        My background includes UAV structural design and CAD work, aviation operations in the RSAF,
+        and technical project support in aviation.
+      </p>
+      <p>
+        Outside of engineering, I train (Hyrox) and enjoy hands-on projects — it keeps me practical and disciplined.
       </p>
 
+      <div class="photos">
+        <figure class="ph">
+          <img src="3D_printer.jpg" alt="3D printing" />
+          <figcaption>3D printing & prototyping</figcaption>
+        </figure>
 
-      <div class="photos" style="margin-top:12px;">
+        <figure class="ph">
+          <img src="Fishing%20reel%20stand.jpg" alt="Fishing reel stand" />
+          <figcaption>Custom fishing reel stand</figcaption>
+        </figure>
 
-  <figure class="ph">
-    <img src="3D_printer.jpg" alt="3D printing project" />
-    <figcaption>3D printing & prototyping</figcaption>
-  </figure>
-
-  <figure class="ph">
-    <img src="Fishing reel stand.jpg" alt="Fishing reel stand project" />
-    <figcaption>Custom fishing reel stand</figcaption>
-  </figure>
-
-  <figure class="ph">
-    <img src="Hyrox.jpg" alt="Hyrox event" />
-    <figcaption>Hyrox – pushing physical limits</figcaption>
-  </figure>
-
-</div>
+        <figure class="ph">
+          <img src="Hyrox.jpg" alt="Hyrox" />
+          <figcaption>Hyrox training</figcaption>
+        </figure>
+      </div>
+    </div>
   </section>
 
+  <!-- PROJECTS -->
   <section id="projects" class="section grid">
     <div class="card">
-     <h2>Projects</h2>
+      <h2>Projects</h2>
 
-<div class="list">
+      <div class="projGrid">
+        <div class="item">
+          <b>AeroNUS UAV – Structural Design & CAD Lead</b>
+          <div class="small">
+            SolidWorks CAD and basic FEA to optimise the UAV airframe while meeting fabrication and competition constraints.
+          </div>
+          <div class="small" style="margin-top:8px;">
+            • CAD modelling & assembly<br>
+            • FEA-assisted iteration (basic)<br>
+            • Cross-team integration (aero + propulsion)<br>
+            • Manufacturability and constraints
+          </div>
+        </div>
 
-  <div class="item">
-    <b>AeroNUS UAV – Structural Design & CAD Lead</b>
-    <div class="small">
-      Designed and analysed an electric-powered UAV airframe for the AIAA
-      Design-Build-Fly competition.
-    </div>
-    <div class="small">
-      • Led CAD modelling using SolidWorks<br>
-      • Performed basic FEA to optimise strength-to-weight ratio<br>
-      • Coordinated with aerodynamics and propulsion teams<br>
-      • Ensured designs met fabrication and competition constraints
-    </div>
-  </div>
+        <div class="item">
+          <b>Fishing Reel Stand – 3D Printed</b>
+          <div class="small">
+            Designed a custom reel stand and iterated based on print results (fit, strength, surface finish).
+          </div>
+          <img class="projThumb" src="Fishing%20reel%20stand.jpg" alt="Fishing reel stand project image" />
+        </div>
 
-  <div class="item">
-    <b>Fishing Reel Holder – 3D Printed Product</b>
-    <div class="small">
-      Designed a custom reel holder focused on strength, surface finish,
-      and ease of printing.
-    </div>
-    <div class="small">
-      • Iterated CAD designs based on print failures<br>
-      • Tested PLA and PETG material behaviour<br>
-      • Optimised print orientation and support strategy
-    </div>
-  </div>
+        <div class="item">
+          <b>3D Printing & Prototyping (Cura + iteration)</b>
+          <div class="small">
+            Practical prototyping workflow: model → slice → print → diagnose failures → refine.
+          </div>
+          <img class="projThumb" src="3D_printer.jpg" alt="3D printing project image" />
+        </div>
 
-  <div class="item">
-    <b>Custom Fishing Lure Design</b>
-    <div class="small">
-      Reverse-engineered lure geometry and created parametric CAD models
-      for prototyping and testing.
-    </div>
-    <div class="small">
-      • Designed for manufacturability<br>
-      • Considered balance, form factor, and printing constraints
-    </div>
-  </div>
+        <div class="item">
+          <b>Custom Fishing Lure CAD (Prototype-driven)</b>
+          <div class="small">
+            Parametric modelling for manufacturable lure prototypes and rapid iteration.
+          </div>
+          <div class="small" style="margin-top:8px;">
+            • CAD modelling in SolidWorks<br>
+            • Designed for printing and post-processing<br>
+            • Focus on practical geometry and assembly
+          </div>
+        </div>
+      </div>
 
-</div>
+    </div>
+  </section>
 
+  <!-- EXPERIENCE -->
   <section id="experience" class="section grid">
     <div class="card">
       <h2>Experience</h2>
-
-<div class="list">
-  <div class="item">
-    <b>Republic of Singapore Air Force – Air Warfare Officer</b>
-    <div class="small">
-      Led air defence operations, training programmes, and large-scale public
-      engagement events under high-responsibility environments.
+      <div class="list">
+        <div class="item">
+          <b>Republic of Singapore Air Force — Air Warfare Officer</b>
+          <div class="small">
+            Air defence operations and training in a time-critical environment. Planned RSAF Open House coordination.
+          </div>
+        </div>
+        <div class="item">
+          <b>Jet Aviation (Asia Pacific) — PMO Intern / Project Assistant Manager</b>
+          <div class="small">
+            Audited documentation for CAAS compliance and supported process improvements for operational efficiency.
+          </div>
+        </div>
+        <div class="item">
+          <b>Nanyang Educational Consultancy — Mathematics Tutor</b>
+          <div class="small">
+            Built customised learning materials and strengthened communication through structured explanation.
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <div class="item">
-    <b>Jet Aviation (Asia Pacific) – Project Management Intern</b>
-    <div class="small">
-      Supported aviation projects through regulatory audits, process
-      improvement, and documentation compliance with CAAS standards.
-    </div>
-  </div>
-</div>
-
-
+  <!-- CONTACT -->
   <section id="contact" class="section grid">
     <div class="card">
       <h2>Contact</h2>
-      <p class="mono">Email: Maiertan1@gmail.com</p>
-      <p class="mono">Telegram/WhatsApp: +65 9150 8603 (optional)</p>
-      <p class="mono">LinkedIn: https://www.linkedin.com/in/maier-tan-6a2230164/
+      <p class="small">Best way to reach me is email or LinkedIn.</p>
+      <p><span class="small">Email:</span> <strong>maiertan1@gmail.com</strong></p>
+      <p><span class="small">WhatsApp:</span> <strong>+65 9150 8603</strong></p>
+      <p>
+        <span class="small">LinkedIn:</span>
+        <a href="https://www.linkedin.com/in/maier-tan-6a2230164/" target="_blank" rel="noreferrer">
+          www.linkedin.com/in/maier-tan-6a2230164/
+        </a>
+      </p>
+
       <div class="row">
-        <a class="btn" href="mailto:Maiertan1@gmail.com?subject=Career%20Fair%20-%20Hello%20Your%20Name">Email Me</a>
+        <a class="btn" href="mailto:maiertan1@gmail.com?subject=Career%20Fair%20-%20Hello%20Maier">Email Me</a>
+        <a class="btn" href="resume.pdf" target="_blank" rel="noreferrer">Open Resume PDF</a>
       </div>
     </div>
   </section>
 
   <div class="footer">
-    <div>handcrafted by you © <span id="y"></span></div>
-    <div class="mono">dark • light </div>
+    <div>Maier Tan © <span id="y"></span></div>
+    <div class="small">Built with GitHub Pages</div>
   </div>
+
 </main>
 
 <script>
@@ -299,6 +345,7 @@ hands-on prototyping, and translating ideas into functional parts.
 </script>
 </body>
 </html>
+
 
 
 
